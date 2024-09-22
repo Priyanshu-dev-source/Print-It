@@ -1,38 +1,452 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body-wrapper{
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-component{
+  height: 10%;
+  width: 100%;
+  position: sticky;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-body-wrapper{
+  height: 100%;
+  width: 100%;
+  position: sticky;
+  /* background-color: aquamarine; */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0px 1px 10px grey;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-logo-name{
+  height: 100%;
+  width: 200px;
+  background-color: white;
+  color: rgb(64, 253, 64);
+  font-size: 35px;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar-items{
+  height: 100%;
+  width: 700px;
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  /* padding-right: 200px; */
+
+  /* flex-direction: row; */
+}
+
+.navbar-items-list{
+  height: 100%;
+  width: 100%;
+  /* background-color: bisque; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.navbar-login-signup{
+  height: 100%;
+  width: 300px;
+  /* background-color: beige; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 50px;
+}
+
+.navbar-login-signup>button{
+  height: 40px;
+  width: 100px;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  border: 1px solid grey;
+  border-radius: 20px;
+  background: transparent;
+  cursor: pointer;
+  transition: width .2s, height .2s;
+  transition-timing-function: linear;
+}
+
+.navbar-login-signup>button:hover{
+  color: rgb(64, 253, 64);
+  height: 45px;
+  width: 102px;
+}
+
+.descp-main-body{
+  height: 680px;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex: row;
+}
+
+.description-body-wrapper{
+  height: 100%;
+  width: 100%;
+  /* background-color: black; */
+  display: flex;
+  flex-direction: col;
+}
+
+.descp-body-about-part{
+  height: 100%;
+  width: 50%;
+  /* background-color: azure; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.descp-body-photo-part{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  /* background-color: aqua; */
+  position: relative;
+  overflow: hidden;
+}
+
+.descp-body-photo-part:before{
+  content: "";
+  position: absolute;
+  height: 1200px;
+  width: 300px;
+  background-color: rgb(245, 245, 245);
+  transform: rotate(45deg);
+  right: 315px;
+
+}
+
+.descp-heading{
+  height: 150px;
+  width: 100%;
+  /* background-color: aquamarine; */
+  font-family: "Rubik", sans-serif;
+  font-size: 55px;
+  font-weight: 500;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.descp-list{
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  font-family: "Rubik", sans-serif;
+  font-size: 19px;
+  font-weight: 200;
+  font-style: normal;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-left: 280px;
+  /* background-color: aqua; */
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.descp-body-button{
+  height: 80px;
+  width: 100%;
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 300px;
+}
+
+.descp-body-button>button{
+  height: 50px;
+  width: 160px;
+  border-radius: 5px;
+  background-color: transparent;
+  /* border: 2px solid white; */
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.descp-body-button>button:first-child{
+  background-color: rgb(64, 253, 64);
+}
+
+.descp-body-about-part:before{
+  content: "";
+  position: absolute;
+  height: 600px;
+  width: 300px;
+  background-color: rgb(245, 245, 245);
+  transform: rotate(45deg);
+  top: 360px;
+  left: 600px;
+}
+
+.descp-body-info{
+  height: 50px;
+  width: 100%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(64, 253, 64);
+  padding-right: 110px;
+}
+
+.shirt-photo-part{
+  height: 400px;
+  width: 350px;
+  background-color:azure;
+  z-index: 10;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-design{
+  position: absolute;
+  height: 200px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+
+.cards-body-wrapper{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aquamarine; */
+}
+
+.cards-part-first,.cards-part-second,.cards-part-third{
+  height: 60%;
+  width: 25%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cards-photo-part{
+  height: 40%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* background-color: aqua; */
+}
+
+.cards-heading-part{
+  height: 15%;
+  width: 80%;
+  font-family: "Rubik", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* background-color: azure; */
+}
+
+.cards-info-part{
+  height: 30%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.product-body-wrapper{
+  height: 600px;
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-body-wrapper:before{
+  content: "";
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  transform: rotate(45deg);
+  background-color: white;
+  left: 40em;
+  bottom: 33em;
+}
+
+.box-first{
+  position: absolute;
+  height: 90%;
+  width: 30%;
+  border-radius:20px;
+  background-color: azure;
+  right:60% ;
+  z-index: 10;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+}
+
+.box-first img{
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.box-second{
+  height: 70%;
+  width: 80%;
+  background-color: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 25%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 7%;
+  flex-direction: column;
+}
+
+.box-second-heading{
+  height: 20%;
+  width: 40%;
+  /* background-color: blueviolet; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.box-second-info{
+  height: 30%;
+  width: 40%;
+  /* background-color: blueviolet; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.box-third-prod{
+  height: 10%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: rgb(64, 253, 64);
+  /* background-color: red; */
+  cursor: pointer;
+}
+
+.copyright-body-wrapper{
+  height: 300px;
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+}
+
+.first-part-footer{
+  height: 70%;
+  width: 100%;
+  background-color: white;
+}
+
+.second-part{
+  height: 30%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.info-part{
+  height: 50%;
+  width: 100%;
+  /* background-color: azure; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: grey;
+}
+
+.info-tagline{
+  height: 50%;
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
 }
